@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { galleryArrayList, listAll } from "./Firebase";
 
-function App() {
+const listGallery = () =>{
+  listAll("photos/");
+  galleryArrayList.map((item) => {
+    console.log("item: " +item);
+  })
+}
+
+function App() {  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      helo
+      <button onClick={listGallery}>list</button>
     </div>
   );
 }
-
 export default App;
